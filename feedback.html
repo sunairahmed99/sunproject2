@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Feedback Form </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" type="" href="pg logo.jpg">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/830722c670.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+<style>
+	
+
+:root{
+--green : #27ae60;
+--black : #192a56;
+--light-color : #666;
+--box-shadow : 0 .5rem 1.5rem rgba(0,0,0,0.1); 
+--red : rgb(192, 51, 51);
+}
+*{
+font-family: 'Open Sans', sans-serif;;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+text-decoration: none;
+
+text-transform: uppercase  ;
+outline: none;
+border: none;
+transition: all .2s linear;
+}
+html{
+font-size: 70%;
+overflow-x: hidden;
+scroll-padding-top: 5.5rem;
+scroll-behavior: smooth;
+}
+header a span{
+color: var(--red);
+}
+header{
+position: relative;
+top: 0;
+left: 0;
+right: 0;
+background-color: #fff;
+padding: 1rem 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1000;
+box-shadow: var(--box-shadow);
+height: 70px;
+/* overflow: hidden; */
+}
+header .logo{
+font-size: 2.5rem;
+color: var(--black);
+font-weight: bolder;
+text-decoration: none;
+
+}
+header .logo i{
+color: var(--red);
+margin: 8px;
+}
+header .navbar a{
+font-size: 1.7rem;
+border-radius: 15px;
+padding: 1rem 1.5rem;
+color: var(--black);
+text-decoration: none;
+
+}
+header .navbar a:hover{
+color: #fff;
+background-color: var(--red);
+}
+#active{
+background-color: var(--red);
+color: #fff;
+}
+
+header .icons i,
+header .icons a{
+cursor: pointer;
+font-size: 2.5rem;
+margin-left: 1.5rem;
+line-height: 4.5rem;
+color: var(--black);
+width: 4.5rem;
+text-align: center;
+border-radius: 10px;
+background-color: #eee;
+text-decoration: none;
+}
+#bb{
+	border: 1px solid red;
+	background: white;
+}
+#bb:hover{
+	border: 1px solid red;
+	background: red;
+	color: white;
+}
+
+header .icons a:hover{
+/* background-color: var(--black); */
+color: #fff;
+background-color: var(--red);
+transform: rotate(360deg);
+
+transition: 1s ease;
+}
+header .icons i:hover{
+color: #fff;
+background-color: var(--red);
+transform: rotate(360deg);
+
+transition: 1s ease;
+}
+
+#menubars{
+display: none;
+
+}
+#search-form{
+position: fixed;
+height: 100%;
+width: 100%;
+top: -100%;
+left: 0;
+z-index: 1004;
+background-color: rgba(0,0,0,0.8);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 1rem;
+}
+#search-form #search-box{
+width: 50rem;
+border-bottom: .3rem solid #fff;
+padding: 1rem 0;
+color: #fff;
+font-size: 3rem;
+text-transform: none;
+background: none;
+}
+#search-form #search-box::placeholder{
+color: #eee;
+}
+#search-form #search-box::-webkit-search-cancel-button{
+-webkit-appearance:none ;
+}
+#search-form label{
+color: #fff;
+font-size: 4rem;
+cursor: pointer;
+}
+#search-form label:hover{
+color: var(--red);
+}
+#search-form #close{
+font-size: 4rem;
+color: #fff;
+position: absolute;
+top: 2rem;
+right: 3rem;
+cursor: pointer;
+}
+#search-form #close:hover{
+color: var(--red);
+transform: rotate(360deg);
+transition: 1s ease;
+}
+#search-form.active{
+top: 0;
+}
+
+#xyx{
+ background: fixed;
+ height: 590px;
+ width: 100%;
+ opacity: 0.7;
+ filter: brightness(1);
+
+} 
+#xyz{
+ background: fixed;
+ height: 590px;
+ width: 100%;
+ opacity: 0.5;
+} 
+#xzz{
+ background: fixed;
+ height: 590px;
+ width: 100%;
+ opacity: 0.5;
+} 
+.carousel-inner{
+position: relative;
+	display: inline-block;
+}
+.carousel-inner>text{
+	position: absolute;
+	z-index: 999;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 40%;
+}
+#abc{
+  background-color: white;
+}
+#bb{
+padding: 10px 30px;
+margin: -5px 10px 5px 30px;
+font-size: 15px;
+border-radius: 10px;
+}
+#img{
+margin-bottom: 5px;
+width: 40px;
+height: 37px;
+}
+@media (max-width:1417px){
+header .logo{
+font-size: 2rem;
+color: var(--black);
+font-weight: bolder;
+text-decoration: none;
+
+}
+header .icons i,
+header .icons a{
+cursor: pointer;
+font-size: 1rem;
+margin-left: 1.5rem;
+line-height: 4.5rem;
+color: var(--black);
+width: 4.5rem;
+text-align: center;
+border-radius: 10px;
+background-color: #eee;
+text-decoration: none;
+}
+}
+@media (max-width:1417px){
+header .logo{
+font-size: 3rem;
+color: var(--black);
+font-weight: bolder;
+text-decoration: none;
+
+}
+header .navbar a{
+font-size: 1rem;
+}
+header .icons i,
+header .icons a{
+cursor: pointer;
+font-size: 2rem;
+margin-left: .5rem;
+line-height: 4.5rem;
+color: var(--black);
+width: 4.5rem;
+text-align: center;
+border-radius: 10px;
+background-color: #eee;
+text-decoration: none;
+}
+}
+@media (max-width:1403px){
+header .logo{
+font-size: 2rem;
+color: var(--black);
+font-weight: bolder;
+text-decoration: none;
+
+}
+header .navbar a{
+font-size: 1rem;
+}
+header .icons i,
+header .icons a{
+cursor: pointer;
+font-size: 3rem;
+margin-left: .5rem;
+line-height: 4.5rem;
+color: var(--black);
+width: 4.5rem;
+text-align: center;
+border-radius: 10px;
+background-color: #eee;
+text-decoration: none;
+}
+}
+@media (max-width:1073px){
+header .logo{
+font-size: 1.5rem;
+color: var(--black);
+font-weight: bolder;
+text-decoration: none;
+
+}
+header .navbar a{
+font-size: .8rem;
+}
+header .icons i,
+header .icons a{
+cursor: pointer;
+font-size: 1rem;
+margin-left: .5rem;
+line-height: 4.5rem;
+color: var(--black);
+width: 4.5rem;
+text-align: center;
+border-radius: 10px;
+background-color: #eee;
+text-decoration: none;
+}
+}
+@media (max-width:517px){
+header .logo{
+font-size: .9rem;
+color: var(--black);
+font-weight: bolder;
+text-decoration: none;
+
+}
+header .navbar a{
+font-size: .9rem;
+}
+header .icons i,
+header .icons a{
+cursor: pointer;
+font-size: .9rem;
+margin-left: .5rem;
+line-height: 4.5rem;
+color: var(--black);
+width: 4.5rem;
+text-align: center;
+border-radius: 10px;
+background-color: #eee;
+text-decoration: none;
+}
+}
+@media (max-width:457px){
+header .logo{
+font-size: .9rem;
+color: var(--black);
+font-weight: bolder;
+text-decoration: none;
+
+}
+#bb{
+padding: 8px;
+font-size: 10px;
+
+}
+#menubars,#search{
+padding: 0 -5px;
+font-size: 10px;
+}
+header .navbar a{
+font-size: .9rem;
+}
+header .icons i,
+header .icons a{
+cursor: pointer;
+font-size: .9rem;
+margin-left: .5rem;
+line-height: 4.5rem;
+color: var(--black);
+width: 4.5rem;
+text-align: center;
+border-radius: 10px;
+background-color: #eee;
+text-decoration: none;
+}
+}
+@media (max-width:1100px){
+html{
+	font-size: 12px;
+	
+}
+header .navbar a{
+	
+	display: none;
+}
+#menubars{
+	display: inline-block;
+	
+}
+header .navbar{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	padding: .5rem;
+	background-color: white;
+	border-top: .5rem solid rgba(0,0,0,0.2);
+	border-bottom: .5rem solid rgba(0,0,0,0.2);
+	clip-path: polygon(0 0, 100% 0, 100% 0 , 0 0);
+	
+}
+header .navbar a{
+	display: block;
+	padding: 1.5rem;
+	margin: 1rem;
+}
+header .navbar.active{
+
+	
+	clip-path: polygon(0 0, 100% 0, 1000% 1000% , 0 1000%);
+}
+#search-form{
+position: fixed;
+height: 100%;
+width: 100%;
+top: -100%;
+left: 0;
+z-index: 1004;
+background-color: rgba(0,0,0,0.8);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 1rem;
+}
+#search-form #search-box{
+width: 25rem;
+border-bottom: .3rem solid #fff;
+padding: 1rem 0;
+color: #fff;
+font-size: 1rem;
+text-transform: none;
+background: none;
+}
+}
+@media(max-width:375px){
+.logo h3{
+font-size: 10px;
+}
+
+.icons{
+display: flex;
+
+}
+
+#bb{
+margin-top: 10px;
+}
+}
+</style>
+	</head>
+	<body>
+		
+			<header>
+				<a href="#" class="logo"><img src="logo1.png" alt="" id="img"> Picnic <span>Games</span></a>
+			
+				<nav class="navbar">
+					<a href="1home.html" >home</a>
+					<a href="#home" >indoor games</a>
+					<a href="#home" >outdoor games</a>
+					<!-- <a href="#dishes">dishes</a> -->
+					
+				   
+					<!-- <a href="#menu">menu</a> -->
+					
+					
+					<a href="2 about us.html">about us</a>  
+					<a href="#review">contact us</a>  
+					<a href="feedback.html" id="active">Feedback</a>
+				</nav>
+			
+				<div class="icons">
+					<i class="fas fa-bars" id="menubars"></i>
+					<i class="fas fa-search" id="search"></i>
+					<a href="3 login form.html" id="bb">Login</a>
+					
+				   
+				</div>
+			
+				<form action="" id="search-form">
+					<input type="search" name="" placeholder="Search here..." id="search-box">
+					<label for="search-box" class="fas fa-search"></label>
+					<i class="fas fa-times" id="close"></i>
+				</form>
+			</header>
+		
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2  id="h">Feedback</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-7 d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Get in touch</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form method="POST" id="contactForm" name="contactForm">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Send Message" class="btn btn-danger">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-5 d-flex align-items-stretch" >
+								<div class="info-wrap bg-danger w-100 p-lg-5 p-4" id="abc">
+									<h3 class="mb-4 mt-md-4">Contact us</h3>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Address:</span> ...</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Phone:</span> <a href="tel://1234567920">...</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">m.umer484123@gmail.com</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-globe"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Website</span> <a href="#">PicincGames.com</a></p>
+					          </div>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+	let menu = document.querySelector('#menubars');
+  let navbar = document.querySelector('.navbar');
+  menu.onclick = () =>{
+	  menu.classList.toggle('fa-times')
+	  navbar.classList.toggle('active')
+  }
+  // window.onclick = () =>{
+  //     menu.classList.remove('fa-times')
+  //     navbar.classList.remove('active')
+  // }
+  document.querySelector('#search').onclick = () =>{
+	  document.querySelector('#search-form').classList.toggle('active')
+  }
+  document.querySelector('#close').onclick = () =>{
+	  document.querySelector('#search-form').classList.remove('active')
+  }
+  </script>
+
+	</body>
+</html>
+
